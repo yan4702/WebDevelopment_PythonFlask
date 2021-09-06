@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f415d7fc36.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <title>Calorie Calculator</title>
+    </head>
+    <body> 
+        <div class="outerContainerCalorie">
+            <!--For header bar of Calorie-->
+            <div class="headerBarCalorie">
+                <div class="logoCalorie">
+                    <img src="./static/logo.png" class= "fitwellLogo" alt="FitWell">
+                </div>
+
+                <nav class = "navLink">
+                    <div class="navItemsCalorie">
+                        <ul>
+                            <li><a href="{{url_for('regisFirst')}}">Register</a></li>
+                            <li><a href="{{url_for('loginFirst')}}">Login</a></li>
+                            <li><a href="{{url_for('logPage')}}">Log</a></li>
+                            <li><a href="{{url_for('dashboardPage')}}">Dashboard</a></li>
+                            <li><a href="{{url_for('uploadPage')}}">Upload</a></li>
+                            <li><a href='#'>Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>   
+            </div> <!--End of header bar of Calorie-->
+
+            <!--For login & register tab bar-->
+            <div class= "registerLoginContainer">
+                <div class = 'registerLoginTab'>
+
+                    
+                    <a href="{{url_for('loginFirst')}}">
+                        <button id="btnTabLogin" >Login</button>
+                    </a>
+
+                    <a href="{{url_for('regisFirst')}}">
+                        <button id ="btnTabRerister" class="active">Register</button>
+                    </a>   
+                </div>
+
+                <div class="loginRegisPage">
+                    <form class="loginRegisForm" method='POST' action="{{url_for('regisFirst')}}">
+                        <label for="" class="myEmailLabel" >Enter your email:</label> 
+                        <input type="text" id="myEmailInput"  class="input01" name="myEmailUser" required>
+
+                        <label for="" class="myPwsLabel" >Enter your password:</label> 
+                        <input type="password" id="myPwsInput"  class="input01" name="myPws" required>
+
+                        <label for="" class="myWeightLabel" >Enter your weight:</label> 
+                        <input type="text" id="myWeightInput"  class="input01" name="myWeight" required>
+
+                        <label for="" class="myGenderLabel" >Enter your gender:</label> 
+                        <input type="text" id="myGenderInput"  class="input01" name="myGender" required>
+
+                        <input type="submit" id="myBtnSubmit" class="input01" value="REGISTER">
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

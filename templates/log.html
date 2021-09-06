@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f415d7fc36.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <title>Calorie Calculator</title>
+    </head>
+    <body> 
+        <div class="outerContainerCalorie">
+            <!--For header bar of Calorie-->
+            <div class="headerBarCalorie">
+                <div class="logoCalorie">
+                    <img src="./static/logo.png" class= "fitwellLogo" alt="FitWell">
+                </div>
+
+                <nav class = "navLink">
+                    <div class="navItemsCalorie">
+                        <ul>
+                            <li><a href="{{url_for('regisFirst')}}">Register</a></li>
+                            <li><a href="{{url_for('loginFirst')}}">Login</a></li>
+                            <li><a href="{{url_for('logPage')}}">Log</a></li>
+                            <li><a href="{{url_for('dashboardPage')}}">Dashboard</a></li>
+                            <li><a href="{{url_for('uploadPage')}}">Upload</a></li>
+                            <li><a href='#'>Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>   
+            </div> <!--End of header bar of Calorie-->
+
+            <!--Left Side Bar for Calorie User-->
+            <div class="innerContainerCalorie">
+                <div class="leftSideBarCalorie">
+                    <i class="fas fa-user"></i>
+
+                    <div class="userDetail">
+                        <p>My id is :abc@gef.com</p>
+                        <p>My gender and weight</p>
+                    </div>
+                </div>
+            </div> <!--End of side bar of calorie-->
+
+            <!--Right Bar for Calorie Calculator-->
+            <div class="rightContainerCalorie">
+                <div class ="rightSideBarCalorie">
+                    <div class = "rightSideTopText">
+                        <h1 class="text01">Calorie Consumption</h1>
+                        <p class="text02">Input Date/Time, your weight, and time spent on each exercise.</p>
+                    </div>
+
+                    <div class="CalorieCalculator">
+                        <div class="label01">
+                            <label for="" class="date&TimeLabel">Date & time</label>
+
+                            <input type="datetime-local" id="dateTimeInput" class="space01" value="yyyy-mm-ddThh:mm" 
+                            min="2021-01-01T00:00">
+
+                            <!--<input type="text" class="dateTimeInput" id="space01" size="21">-->
+                            <label class="date&TimeFormat">e.g 2021-01-22T15:00</label>  
+                        </div>
+                        
+                        <div class="label02">
+                            <!--put default value to 0 for all input for calculation. -->
+                            <label for="" class="WeightLabel" >Weight</label> 
+                            <input type="number" id="WeightInput"  class="space01" value=0 min=1 max=999 style="width:13em">
+                            <label class="WeightUnit">kilograms</label>
+                        </div>
+
+                        <div class="label02">
+                            <label for="" class="walkLabel" >Walking</label>
+                            <input type="number" id="walkInput" class="space01" value=0  min=1 max=999 style="width:13em">
+                            <label class="walkUnit">minutes</label>
+                        </div>
+
+                        <div class="label02">
+                            <label for="" class="runLabel" >Running</label>
+                            <input type="number" id="runInput" class="space01" value=0 min=1 max=999 style="width:13em">
+                            <label class="runUnit">minutes</label>
+                        </div>
+
+                        <div class="label02">
+                            <label for="" class="swimLabel" >Swimming</label>
+                            <input type="number" id="swimInput" class="space01" value=0 min=1 max=999 style="width:13em">
+                            <label class="swimUnit">minutes</label>
+                        </div>
+
+                        <div class="label02">
+                            <label for="" class="bicyLabel" >Bicycling</label>
+                            <input type="number" id="bicyInput" class="space01" value=0 min=1 max=999 style="width:13em">
+                            <label class="bicyUnit">minutes</label>
+                        </div>
+                        
+                        <div class="subButton">
+                            <button type="button" class="buttonInput" onclick="getInputCalorie()" >Submit</button>
+                        </div>
+
+                        <div class="resultsCalorie">
+                            <span>Total calorie to be consumed: </span>
+                            <span id="pasteResult">0</span><br/>
+                            <!--<span id="pasteResult01">0</span>-->
+                        </div>                       
+                    </div>
+                </div>
+            </div> <!--End of Calorie Calculator-->
+        </div>  
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='log.js')}}"></script>
+</html>

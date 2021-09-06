@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f415d7fc36.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <title>Calorie Calculator</title>
+    </head>
+    <body> 
+        <div class="outerContainerCalorie">
+            <!--For header bar of Calorie-->
+            <div class="headerBarCalorie">
+                <div class="logoCalorie">
+                    <img src="./static/logo.png" class= "fitwellLogo" alt="FitWell">
+                </div>
+
+                <nav class = "navLink">
+                    <div class="navItemsCalorie">
+                        <ul>
+                            <li><a href="{{url_for('regisFirst')}}">Register</a></li>
+                            <li><a href="{{url_for('loginFirst')}}">Login</a></li>
+                            <li><a href="{{url_for('logPage')}}">Log</a></li>
+                            <li><a href="{{url_for('dashboardPage')}}">Dashboard</a></li>
+                            <li><a href="{{url_for('uploadPage')}}">Upload</a></li>
+                            <li><a href='#'>Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>   
+            </div> <!--End of header bar of Calorie-->
+
+            <!--Left Side Bar for Calorie User-->
+            <div class="innerContainerCalorie">
+                <div class="leftSideBarCalorie">
+                    <i class="fas fa-user"></i>
+
+                    <div class="userUpload">
+                        <p class="p1">My id is:</p>
+                        <p class="p2"> {{adminEmail}}</p>
+                        <p class="p3">My role is system admin</p>
+                        <p class="p4">and web master</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--right Side Bar for upload file-->
+            <div class="rightContainerChart">
+                <div class ="rightSideBarChart">
+                    <div class = "rightSideTopTextForChart">
+                        <h1 class="text04">Calorie log</h1>
+                        <p class="text02">Last Seven Days Logs</p>
+                    </div>
+
+                    <div class='dotDiv'>
+                        <div class = 'dotAdmin'></div>
+                        <div class='adminText'>{{adminEmail}}</div>
+                    </div>
+                    
+                    
+                    <!--create svg to draw line chart-->
+                    <svg></svg>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="{{url_for('static', filename='dashboard.js')}}"></script>
+    </body>
+</html>

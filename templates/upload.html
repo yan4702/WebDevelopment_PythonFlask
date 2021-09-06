@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/f415d7fc36.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+        <title>Calorie Calculator</title>
+    </head>
+    <body> 
+        <div class="outerContainerCalorie">
+            <!--For header bar of Calorie-->
+            <div class="headerBarCalorie">
+                <div class="logoCalorie">
+                    <img src="./static/logo.png" class= "fitwellLogo" alt="FitWell">
+                </div>
+
+                <nav class = "navLink">
+                    <div class="navItemsCalorie">
+                        <ul>
+                            <li><a href="{{url_for('regisFirst')}}">Register</a></li>
+                            <li><a href="{{url_for('loginFirst')}}">Login</a></li>
+                            <li><a href="{{url_for('logPage')}}">Log</a></li>
+                            <li><a href="{{url_for('dashboardPage')}}">Dashboard</a></li>
+                            <li><a href="{{url_for('uploadPage')}}">Upload</a></li>
+                            <li><a href='#'>Logout</a></li>
+                        </ul>
+                    </div>
+                </nav>   
+            </div> <!--End of header bar of Calorie-->
+
+            <!--Left Side Bar for Calorie User-->
+            <div class="innerContainerCalorie">
+                <div class="leftSideBarCalorie">
+                    <i class="fas fa-user"></i>
+
+                    <div class="userUpload">
+                        <p class="p1">My id is:</p>
+                        <p class="p2"> admin@fitwell.com</p>
+                        <p class="p3">My role is system</p>
+                        <p class="p4">admin and web</p>
+                        <p class="p5">master</p>
+                    </div>
+                </div> <!--End of left side bar of Calorie-->
+
+                <!--right Side Bar for upload file-->
+                <div class="rightContainerCalorie">
+                    <div class ="rightSideBarCalorie">
+                        <div class = "rightSideTopText">
+                            <h1 class="text03">Upload recording</h1>
+                            <p class="text02">Upload CSV file e.g. "admin@fitwell.com,2021-01-17T01:00,97,20,0,0,29"</p>
+                        </div>
+                    </div>
+
+                    <div class="uploadButton">
+                        <form class="uploadFileForm" method='POST' action="{{url_for('uploadPage')}}" enctype = "multipart/form-data">
+                             <input type="file" id="myUploadFile" class="input01" name="myUpload" multiple>
+                             <input type="submit" id="uploadBtn" class="input01" value="Upload">
+                        </form>
+     
+                     </div>
+                </div> <!--End of right side bar of Calorie--> 
+            </div> <!--End of side bar of calorie-->
+
+        </div>
+        <script src="{{url_for('static', filename='log.js')}}"></script>
+    </body>
+</html>
