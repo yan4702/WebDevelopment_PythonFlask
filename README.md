@@ -1,5 +1,6 @@
 # Personal Health Web Development with Python Flask (Back End)
-This is mine school assignment to create web application regarding to the personal health system by employ Flask Framework. By this time, all user input values and details shall pass from front end via AJAX to back end which is python flask to store into database (MongoDB). The directory structure as follows:
+This is mine school assignment to create web application regarding to the personal health system by employ Flask Framework. By this time, all user input values and details shall pass from front end via AJAX to back end which is python flask to store into database (MongoDB). Futhermore, the calorie logs of user shall retrieve from database and pass to front end for display purpose.
+The directory structure as follows:
 
           /home/user/Projects/TMA
           ├── Q1/
@@ -36,7 +37,7 @@ log.html (logging page),
 ![image](https://user-images.githubusercontent.com/59326036/134160781-9e6fc99d-2cf4-4bda-b256-390a919c5a66.png)
 
 
-register.html (register), 
+register.html (register page), 
 
 ![image](https://user-images.githubusercontent.com/59326036/134160826-103c3fae-2308-4874-8534-2a91dbb3a07f.png)
 
@@ -44,4 +45,14 @@ register.html (register),
 index.html (login pages), 
 
 ![image](https://user-images.githubusercontent.com/59326036/134160867-28d222c7-d2a7-4db5-be26-7a94383f7340.png)
+
+upload.html (upload page),
+
+![image](https://user-images.githubusercontent.com/59326036/134163023-5df4d443-386d-4afd-8fb0-0e3a334eecaa.png)
+
+dashboard.html (dashboard page)
+![image](https://user-images.githubusercontent.com/59326036/134163153-74613395-b195-4d36-868e-fd8aea01e940.png)
+
+
+
 
