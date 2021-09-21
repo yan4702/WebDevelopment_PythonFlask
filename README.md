@@ -50,7 +50,8 @@ upload.html (upload page),
 
 ![image](https://user-images.githubusercontent.com/59326036/134163023-5df4d443-386d-4afd-8fb0-0e3a334eecaa.png)
 
-dashboard.html (dashboard page)
+dashboard.html (dashboard page),
+
 ![image](https://user-images.githubusercontent.com/59326036/134163153-74613395-b195-4d36-868e-fd8aea01e940.png)
 
 
