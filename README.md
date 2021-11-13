@@ -1,5 +1,5 @@
 # Personal Health Web Development with Python Flask (Back End)
-This is mine school assignment to create web application regarding to the personal health system by employ Flask Framework. By this time, all user input values and details shall pass from front end via AJAX to back end which is python flask to store into database (MongoDB). Futhermore, the calorie logs of user shall retrieve from database and pass to front end for display purpose.
+This is my school assignment to create web application regarding to the personal health system by employ Flask Framework. By this time, all user input values and details shall pass from front end via AJAX to back end which is python flask to store into database (MongoDB). Futhermore, the calorie logs of user shall retrieve from database and pass to front end for display purpose.
 The directory structure as follows:
 
           /home/user/Projects/TMA
